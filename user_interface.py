@@ -18,21 +18,21 @@ def simulation_main_menu():
 def validate_main_menu(user_input):
     """Validation function that checks if 'user_input' argument is an int 1-4. No errors."""
     switcher = {
+        0: (True, 0),
         1: (True, 1),
         2: (True, 2),
         3: (True, 3),
-        4: (True, 4),
     }
-    return switcher.get(user_input, (False, None))
+    return switcher.get(user_input,(False, None))
 
 
 def display_customer_wallet_info(coins_list, total_value):
     """Takes in a list of ints to display number of coins along with total value of coins."""
-    print('You have {coins_list[0]} Quarters')
-    print('You have {coins_list[1]} Dimes')
-    print('You have {coins_list[2]} Nickels')
-    print('You have {coins_list[3]} Pennies')
-    print('Your wallet\'s total value is {total_value}')
+    print("You have " + str(coins_list[0]) + ' Quarters')
+    print("You have " + str(coins_list[1]) + ' Dimes')
+    print("You have " + str(coins_list[2]) + ' Nickles')
+    print("You have " + str(coins_list[3]) + ' Pennies')
+    print("Your wallet's total value is "  + str(total_value))
 
 
 def display_welcome():
@@ -48,7 +48,7 @@ def display_welcome():
 
 def output_text(text):
     """User input method that will print to console any string passed in as an argument"""
-    print("text")
+    print(text)
 
 
 def clear_console():
